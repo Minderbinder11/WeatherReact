@@ -5,7 +5,7 @@ var Nav = React.createClass({
 
     onSearch: function (e) {
         e.preventDefault();
-        alert('not yet wired up');
+        alert('not yet wired up!');
     },
 
 
@@ -36,11 +36,7 @@ var Nav = React.createClass({
                 </div>
             </div>
         );
-
     }
 });
 
 module.exports = Nav;
-
-
-var old = {}
