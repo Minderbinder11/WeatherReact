@@ -2,12 +2,20 @@ var React = require('react');
 
 
 var Examples = (props) => {
-        return (
-            <div>
-                <div className="btn btn-danger"> Don't Press Me </div>
-                <h3> Example Page</h3>
-        </div>
-        );
+  return (
+    <div>
+      <h1 className="text-center">Examples</h1>
+      <p>Here are a few example locations to try out:</p>
+      <ol>
+        <li>
+          <Link to='/?location=Philadelphia'>Philadelphia, PA</Link>
+        </li>
+        <li>
+          <Link to='/?location=Rio'>Rio, Brazil</Link>
+        </li>
+      </ol>
+    </div>
+  )
 };
 
 module.exports = Examples;

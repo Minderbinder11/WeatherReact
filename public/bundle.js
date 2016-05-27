@@ -24827,17 +24827,20 @@
 	var Nav = __webpack_require__(224);
 
 	var Main = function Main(props) {
-	    return React.createElement(
+	  return React.createElement(
+	    'div',
+	    null,
+	    React.createElement(Nav, null),
+	    React.createElement(
+	      'div',
+	      { className: 'row' },
+	      React.createElement(
 	        'div',
-	        null,
-	        React.createElement(Nav, null),
-	        React.createElement(
-	            'h2',
-	            null,
-	            ' Main Component'
-	        ),
+	        { className: 'columns medium-6 large-4 small-centered' },
 	        props.children
-	    );
+	      )
+	    )
+	  );
 	};
 
 	module.exports = Main;
@@ -24857,98 +24860,83 @@
 
 
 	var Nav = React.createClass({
-	    displayName: 'Nav',
+	  displayName: 'Nav',
 
-
-	    onSearch: function onSearch(e) {
-	        e.preventDefault();
-	        alert('not yet wired up');
-	    },
-
-	    render: function render() {
-
-	        return React.createElement(
-	            'div',
-	            { className: 'top-bar' },
+	  onSearch: function onSearch(e) {
+	    e.preventDefault();
+	    alert('Not yet wired up!');
+	  },
+	  render: function render() {
+	    return React.createElement(
+	      'div',
+	      { className: 'top-bar' },
+	      React.createElement(
+	        'div',
+	        { className: 'top-bar-left' },
+	        React.createElement(
+	          'ul',
+	          { className: 'menu' },
+	          React.createElement(
+	            'li',
+	            { className: 'menu-text' },
+	            'React Weather App'
+	          ),
+	          React.createElement(
+	            'li',
+	            null,
 	            React.createElement(
-	                'div',
-	                { className: 'top-bar-left' },
-	                React.createElement(
-	                    'ul',
-	                    { className: 'menu' },
-	                    React.createElement(
-	                        'li',
-	                        { className: 'menu-text' },
-	                        'React Weather App'
-	                    ),
-	                    React.createElement(
-	                        'li',
-	                        null,
-	                        React.createElement(
-	                            IndexLink,
-	                            { to: '/', activeClassName: 'active', activeStyle: { fontWeight: 'bold' } },
-	                            'Get Weather'
-	                        )
-	                    ),
-	                    React.createElement(
-	                        'li',
-	                        null,
-	                        React.createElement(
-	                            IndexLink,
-	                            { to: '/about', activeClassName: 'active',
-	                                activeStyle: { fontWeight: 'bold' } },
-	                            'About'
-	                        )
-	                    ),
-	                    React.createElement(
-	                        'li',
-	                        null,
-	                        React.createElement(
-	                            IndexLink,
-	                            { to: '/examples', activeClassName: 'active', activeStyle: { fontWeight: 'bold' } },
-	                            'Examples'
-	                        )
-	                    ),
-	                    React.createElement(
-	                        'li',
-	                        null,
-	                        React.createElement(
-	                            IndexLink,
-	                            { to: '/fiveday', activeClassName: 'active', activeStyle: { fontWeight: 'bold' } },
-	                            'Five Day Forecast'
-	                        )
-	                    )
-	                )
+	              IndexLink,
+	              { to: '/', activeClassName: 'active', activeStyle: { fontWeight: 'bold' } },
+	              'Get Weather'
+	            )
+	          ),
+	          React.createElement(
+	            'li',
+	            null,
+	            React.createElement(
+	              Link,
+	              { to: '/about', activeClassName: 'active', activeStyle: { fontWeight: 'bold' } },
+	              'About'
+	            )
+	          ),
+	          React.createElement(
+	            'li',
+	            null,
+	            React.createElement(
+	              Link,
+	              { to: '/examples', activeClassName: 'active', activeStyle: { fontWeight: 'bold' } },
+	              'Examples'
+	            )
+	          )
+	        )
+	      ),
+	      React.createElement(
+	        'div',
+	        { className: 'top-bar-right' },
+	        React.createElement(
+	          'form',
+	          { onSubmit: this.onSearch },
+	          React.createElement(
+	            'ul',
+	            { className: 'menu' },
+	            React.createElement(
+	              'li',
+	              null,
+	              React.createElement('input', { type: 'search', placeholder: 'Search weather' })
 	            ),
 	            React.createElement(
-	                'div',
-	                { className: 'top-bar-right' },
-	                React.createElement(
-	                    'form',
-	                    { onSubmit: this.onSearch },
-	                    React.createElement(
-	                        'ul',
-	                        { className: 'menu' },
-	                        React.createElement(
-	                            'li',
-	                            null,
-	                            React.createElement('input', { type: 'search', placeholder: 'Search Weather' })
-	                        ),
-	                        React.createElement(
-	                            'li',
-	                            null,
-	                            React.createElement('input', { type: 'submit', className: 'button', value: 'Get Weather' })
-	                        )
-	                    )
-	                )
+	              'li',
+	              null,
+	              React.createElement('input', { type: 'submit', className: 'button', value: 'Get Weather' })
 	            )
-	        );
-	    }
+	          )
+	        )
+	      )
+	    );
+	  }
 	});
 
 	module.exports = Nav;
-
-	var old = {};
 
 /***/ },
 /* 225 */
@@ -26322,25 +26310,47 @@
 /* 248 */
 /***/ function(module, exports, __webpack_require__) {
 
-	"use strict";
+	'use strict';
 
 	var React = __webpack_require__(8);
 
 	var Examples = function Examples(props) {
-	        return React.createElement(
-	                "div",
-	                null,
-	                React.createElement(
-	                        "div",
-	                        { className: "btn btn-danger" },
-	                        " Don't Press Me "
-	                ),
-	                React.createElement(
-	                        "h3",
-	                        null,
-	                        " Example Page"
-	                )
-	        );
+	  return React.createElement(
+	    'div',
+	    null,
+	    React.createElement(
+	      'h1',
+	      { className: 'text-center' },
+	      'Examples'
+	    ),
+	    React.createElement(
+	      'p',
+	      null,
+	      'Here are a few example locations to try out:'
+	    ),
+	    React.createElement(
+	      'ol',
+	      null,
+	      React.createElement(
+	        'li',
+	        null,
+	        React.createElement(
+	          Link,
+	          { to: '/?location=Philadelphia' },
+	          'Philadelphia, PA'
+	        )
+	      ),
+	      React.createElement(
+	        'li',
+	        null,
+	        React.createElement(
+	          Link,
+	          { to: '/?location=Rio' },
+	          'Rio, Brazil'
+	        )
+	      )
+	    )
+	  );
 	};
 
 	module.exports = Examples;
