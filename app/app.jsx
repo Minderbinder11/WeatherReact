@@ -10,6 +10,11 @@ var FiveDay             = require('FiveDay');
 
 /*<!-- ReactDOM is where I seem to requster all of the page elements and add in the routing--> */
 
+// Load foundation
+require('style!css!foundation-sites/dist/foundation.min.css')
+
+$(document).foundation();
+
 ReactDOM.render(
     <Router history={hashHistory}>
         <Route path="/"             component={Main}>
