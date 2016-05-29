@@ -12,9 +12,12 @@
   "dependencies": {
     "axios": "^0.11.1",
     "express": "^4.13.4",
+    "nonce": "^1.0.3",
+    "oauth-signature": "^1.3.1",
     "react": "^0.14.7",
     "react-dom": "^0.14.7",
-    "react-router": "^2.0.0"
+    "react-router": "^2.0.0",
+    "request": "^2.72.0"
   },
   "devDependencies": {
     "babel-cli": "^6.9.0",

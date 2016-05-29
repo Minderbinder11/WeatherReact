@@ -2,6 +2,8 @@ var React = require('react');
 var InputButton = require('InputButton');
 var WeatherMessage = require('WeatherMessage');
 var openWeatherMap = require('openWeatherMap');
+//var request_yelp = require('request_yelp');
+
 
 var Weather = React.createClass({
     getInitialState: function () {
@@ -24,6 +26,7 @@ var Weather = React.createClass({
             that.setState({isLoading: false});
             alert(errorMessage);
         });
+
     },
 
     render: function () {

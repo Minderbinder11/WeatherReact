@@ -11,7 +11,7 @@ module.exports = {
             if (res.data.cod && res.data.message) {
                 throw new Error(res.data.message);
             } else {
-                console.log(res.data);
+                console.log(res.data.weather[0]);
                 return res.data.main.temp;
             }
         }, function (res) {

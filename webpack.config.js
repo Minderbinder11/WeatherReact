@@ -32,7 +32,8 @@ module.exports = {
             WeatherMessage  : 'app/components/WeatherMessage.jsx',
             InputButton     : 'app/components/InputButton.jsx',
             FiveDay         : 'app/components/FiveDayForecast.jsx',
-            openWeatherMap  : 'app/api/openWeatherMap.jsx'
+            openWeatherMap  : 'app/api/openWeatherMap.jsx',
+            request_yelp    : 'process.js'
         },
 
         extensions          : ['', '.js', '.jsx']
